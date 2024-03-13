@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="public">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image:linear-gradient(to left,rgb(32, 32, 32),black,rgb(32, 32, 32));
+        }
+        .container{
+            width:30%;
+            height:40%;
+            position: relative;
+        }
+        .container-1,.container-2,.container-3,.container-4,.container-5{
+            position: relative;
+        }
+    
+        .container-1{
+            width:20px;
+            height:200px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left: -10px;
+            margin-top:-100px;
+        }
+        .container-2{
+            width:20px;
+            height:200px;
+            transform: rotate(72deg);
+            transform-origin: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left: -10px;
+            margin-top:-100px;
+        }
+        .container-3{
+            width:20px;
+            height: 200px;
+            transform: rotate(-72deg);
+            transform-origin: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left:-10px;
+            margin-top:-100px;
+        }
+        .container-4{
+            width:20px;
+            height: 200px;
+            transform: rotate(-144deg);
+            transform-origin: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left:-10px;
+            margin-top:-100px;
+        }
+        .container-5{
+            width:20px;
+            height: 200px;
+            transform: rotate(144deg);
+            transform-origin: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-left:-10px;
+            margin-top:-100px;
+        }
+        .circle-1,.circle-2,.circle-3,.circle-4,.circle-5{
+            border-radius: 50%;
+            position: absolute;
+            width:20px;
+            height:20px;
+        }
+        .circle-1{
+            background-color: lightgreen;
+            animation:circle 3s ease-in-out infinite;
+            box-shadow: 0 0 10px lightgreen;
+        }
+        .circle-2{
+            
+            background-color: coral;
+            animation: circle 3s ease-in-out infinite;
+            box-shadow: 0 0 10px coral ;
+        }
+        .circle-3{
+            
+            background-color: lightseagreen;
+            animation: circle 3s ease-in-out infinite;
+            box-shadow: 0 0 10px lightblue;
+        }
+        .circle-4{
+            
+            background-color: pink;
+            animation: circle 3s ease-in-out infinite;
+            box-shadow: 0 0 10px pink;
+        }
+        .circle-5{
+            background-color: dodgerblue;
+            animation: circle 3s ease-in-out infinite;
+            box-shadow: 0 0 10px dodgerblue;
+        }
+        .loading{
+            letter-spacing: 1px;
+            color:rgb(243, 243, 243);
+            animation: loading 6s linear infinite;
+        }
+        
+       @keyframes circle {
+        from{
+            top:0;
+        }
+        50%{
+            top:calc(100% - 20px);
+        }
+        to{
+            top:0;
+        }
+       }
+       @keyframes loading {
+        from{
+            text-shadow: none;
+        }
+        25%{
+            text-shadow: 0 0 1px rgb(243, 243, 243);
+        }
+        50%{
+            text-shadow: 0 0 3px rgb(243, 243, 243);
+        }
+        75%{
+            text-shadow: 0 0 1px rgb(243, 243, 243);
+        }
+        to{
+            text-shadow: none;
+        }
+       }
+    </style>
+   
+        
+</head>
+
+<body>
+    <div class="container">
+<div class="container-1">
+    <div class="circle-1"></div>
+</div>
+<div class="container-2">
+    <div class="circle-2"></div>
+</div>
+<div class="container-3">
+    <div class="circle-3"></div>
+</div>
+<div class="container-4">
+    <div class="circle-4"></div>
+</div>
+<div class="container-5">
+    <div class="circle-5"></div>
+</div>
+</div>
+<h2 class="loading">Please Wait...</h2>
+
+<script>
+
+
+
+</script>
+</body>
+</html>
