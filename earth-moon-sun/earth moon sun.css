@@ -1,0 +1,117 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.system{
+    height: 100vh;
+    position:relative;
+    background-image:linear-gradient(to left, rgb(42, 42, 42),black,rgb(42, 42, 42));
+}
+.sun{
+    position: absolute;
+    width:300px;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin-top:-150px;
+    margin-left: -150px;
+    background-color: rgb(252, 252, 152);
+    box-shadow:0 0 35px rgb(255, 255, 116);
+    border-radius: 50%;
+}
+.motion{
+    width:80px;
+    height:350px;
+    /*border:1px solid tomato;*/
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-40px;
+    margin-top:-350px;
+    animation: rotate linear 20s infinite;
+}
+.earth-moon{
+    width:80px;
+    height: 80px;
+    /*border: 1px solid;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.earth{
+    width:26px;
+    height:26px;
+    background-image:linear-gradient(to left, green,blue);
+    box-shadow: 0 0 15px dodgerblue;
+    border-radius: 50%;
+    animation:rotate-earth 4s linear infinite;
+}
+.moon-motion{
+    position: relative;
+    width:26px;
+    height: 35px;
+    top:-13px;
+    /*border: 1px solid red;*/
+    animation: moon-rotation 4s linear infinite;
+}
+
+.moon{
+    position: absolute;
+    left:50%;
+    top:calc(100% - 12px);
+    margin-left:-6px;
+    width:12px;
+    height: 12px;
+    background-image:linear-gradient(to left,rgb(132, 132, 132),rgb(47, 47, 47));
+    border-radius: 50%;
+    box-shadow: 0 0 4px darkgrey;
+    animation:moon-rotate 1s linear infinite;
+}
+
+
+@keyframes rotate {
+    from{
+        transform:rotate(360deg);
+        transform-origin:bottom;
+    }
+    to{
+        transform: rotate(0);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes moon-rotation {
+    from{
+        transform: rotate(360deg);
+        transform-origin:top;
+    }
+    to{
+        transform: rotate(0);
+        transform-origin:top;
+    }
+}
+
+@keyframes rotate-earth {
+    from{
+        transform: rotate(360deg);
+        transform-origin:center;
+    }
+    to{
+        transform: rotate(0);
+        transform-origin:center;
+    }
+}
+
+@keyframes moon-rotate {
+    from{
+        transform: rotate(360deg);
+        transform-origin:center;
+    }
+    to{
+        transform: rotate(0);
+        transform-origin:center;
+    }
+}

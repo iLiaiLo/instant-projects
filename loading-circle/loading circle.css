@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin:0;
+}
+
+.loading{
+    width:100px;
+    height:100px;
+    background-image:linear-gradient(to left,#0000ff,#1e90ff,#add8e6);
+    border-radius: 50%;
+    position: relative;
+    animation: rotation 4s linear infinite;
+}
+.loading::before{
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    background:white;
+    width:70px;
+    height: 70px;
+    top:50%;
+    left:50%;
+    margin-top:-35px;
+    margin-left:-35px;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+    to{
+        transform: rotate(0);
+        transform-origin: center;
+    }
+}
